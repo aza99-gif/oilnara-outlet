@@ -280,11 +280,7 @@ body.light
   .panel.active{padding-top:48px;}
 
   /* MONITOR specific */
-  .monitor-wrap{
-    grid-template-columns:1fr;
-    height:auto;
-    padding:8px;
-  }
+  .monitor-wrap{display:grid;grid-template-columns:1fr 1.6fr .9fr;gap:12px;height:calc(100vh - 115px);padding:12px;}
   
   .monitor-toolbar{
     position:sticky;top:48px;
@@ -311,7 +307,7 @@ body.light
   .nav-clock{display:none;}
   .theme-btn{padding:4px 7px;font-size:10px;}
   
-  .monitor-wrap{grid-template-columns:1fr;height:auto;padding:8px;}
+  .monitor-wrap{display:grid;grid-template-columns:1fr 1.6fr .9fr;gap:12px;height:calc(100vh - 115px);padding:12px;}
   
   .monitor-toolbar{top:46px;position:sticky;z-index:100;background:var(--bg2);gap:5px;flex-wrap:wrap;padding:8px 10px;}
   .monitor-toolbar .btn-tool{font-size:11px;padding:6px 9px;}
@@ -327,7 +323,7 @@ body.light
   .nav-clock{display:none;}
   .theme-btn{padding:4px 7px;font-size:10px;}
   
-  .monitor-wrap{grid-template-columns:1fr;height:auto;padding:8px;}
+  .monitor-wrap{display:grid;grid-template-columns:1fr 1.6fr .9fr;gap:12px;height:calc(100vh - 115px);padding:12px;}
   
   #alertBannerWrap{margin-top:0;}
   .monitor-toolbar{position:sticky;top:46px;z-index:100;background:var(--bg2);gap:5px;flex-wrap:wrap;padding:8px 10px;}
@@ -342,7 +338,7 @@ body.light
   .nav-clock{display:none;}
   .theme-btn{padding:4px 8px;font-size:10px;}
   .sync-dot{width:7px;height:7px;}
-  .monitor-wrap{grid-template-columns:1fr;height:auto;padding:8px;}
+  .monitor-wrap{display:grid;grid-template-columns:1fr 1.6fr .9fr;gap:12px;height:calc(100vh - 115px);padding:12px;}
   
   .monitor-toolbar{gap:5px;flex-wrap:wrap;padding:8px 10px;}
   .monitor-toolbar .btn-tool{font-size:11px;padding:6px 9px;}
@@ -351,21 +347,65 @@ body.light
   .admin-wrap{padding:16px 12px;}
 }
 
-@media(max-width:768px){
-  .nav{height:46px;overflow:hidden;}
   .nav-tab{padding:0 9px;font-size:11px;height:46px;display:flex;align-items:center;}
   .nav>span{padding:0 9px;font-size:11px;white-space:nowrap;display:flex;align-items:center;}
   .nav-right{gap:5px;padding-right:10px;}
   .nav-clock{display:none;}
   .theme-btn{padding:4px 8px;font-size:10px;}
   .sync-dot{width:7px;height:7px;}
-  .monitor-wrap{grid-template-columns:1fr;height:auto;padding:8px;}
-  .col-body{max-height:400px;}
+  .monitor-wrap{display:grid;grid-template-columns:1fr 1.6fr .9fr;gap:12px;height:calc(100vh - 115px);padding:12px;}
+  .col-body{flex:1;overflow-y:auto;padding:7px;border-radius:0 0 12px 12px;border:1px solid var(--border);border-top:none;background:var(--bg);}
   .monitor-toolbar{gap:5px;flex-wrap:wrap;padding:8px 10px;}
   .monitor-toolbar .btn-tool{font-size:11px;padding:6px 9px;}
   .date-nav .cur-date{min-width:70px;font-size:12px;}
   .input-wrap{padding:16px 12px;}
   .admin-wrap{padding:16px 12px;}
+}
+
+/* ── TABLET ── */
+@media(max-width:1024px){
+  .monitor-wrap{grid-template-columns:1fr 1.4fr .8fr;gap:10px;padding:10px;}
+}
+
+/* ── MOBILE ── */
+@media(max-width:768px){
+  /* Nav */
+  .nav{height:46px;overflow:hidden;}
+  .nav-tab{padding:0 9px;font-size:11px;height:46px;display:flex;align-items:center;}
+  .nav>span{padding:0 8px;font-size:11px;white-space:nowrap;display:flex;align-items:center;}
+  .nav-right{gap:5px;padding-right:8px;}
+  .nav-clock{display:none;}
+  .theme-btn{padding:4px 7px;font-size:10px;}
+  .sync-dot{width:7px;height:7px;}
+
+  /* Monitor: 세로 단일 컬럼 */
+  .monitor-wrap{
+    grid-template-columns:1fr;
+    height:auto;
+    padding:8px;
+    gap:8px;
+  }
+  .col{height:auto;}
+  .col-body{max-height:320px;}
+  .monitor-toolbar{gap:5px;flex-wrap:wrap;padding:8px 10px;}
+  .monitor-toolbar .btn-tool{font-size:11px;padding:6px 9px;}
+  .date-nav{gap:4px;}
+  .date-nav .cur-date{min-width:70px;font-size:12px;}
+  .date-nav button{padding:4px 8px;font-size:12px;}
+
+  /* Input */
+  .input-wrap{padding:16px 12px;}
+  .form-card{padding:18px 14px;}
+
+  /* Admin */
+  .admin-wrap{padding:16px 12px;}
+  .stats-grid{grid-template-columns:1fr 1fr;}
+  .cal-day{min-height:38px;font-size:10px;}
+
+  /* Cards */
+  .card-active .c-pqty-active{font-size:20px;padding:3px 10px;}
+  .card-actions{flex-wrap:wrap;}
+  .act-btn{font-size:11px;padding:6px 10px;}
 }
 </style>
 </head>
