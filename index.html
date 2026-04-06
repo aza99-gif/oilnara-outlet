@@ -224,13 +224,20 @@ body{background:var(--bg);color:var(--text);font-family:'Malgun Gothic','Apple S
 @media(max-width:768px){
   .monitor-wrap{grid-template-columns:1fr;height:auto;padding:8px;}
   .col-body{max-height:380px;}
-  .nav-tab{padding:11px 10px;font-size:12px;}
-  .monitor-toolbar{gap:6px;flex-wrap:wrap;}
-  .nav{position:-webkit-sticky;position:sticky;top:0;z-index:200;}
-  .nav-right{gap:6px;padding-right:8px;}
+  .nav-tab{padding:10px 9px;font-size:11px;}
+  .monitor-toolbar{gap:5px;flex-wrap:wrap;}
+  .nav{position:fixed;top:0;left:0;right:0;z-index:200;height:48px;}
+  .nav-right{gap:5px;padding-right:8px;}
   .nav-clock{display:none;}
   .date-nav .cur-date{min-width:75px;font-size:12px;}
   .monitor-toolbar .btn-tool{font-size:11px;padding:6px 10px;}
+  .panel{padding-top:48px;}
+  #panel-monitor{padding-top:0;}
+  #panel-monitor .alert-banner-wrap{margin-top:48px;}
+  .monitor-toolbar{margin-top:48px;}
+  .input-wrap{padding-top:60px;}
+  .admin-wrap{padding-top:60px;}
+  #adminLock{padding-top:60px;}
 }
 
 /* ══ SITE HEADER ══ */
@@ -287,7 +294,7 @@ body.light .site-logo{filter:brightness(0.95);}
 </head>
 <body>
 
-<div class="nav"><span style="padding:0 20px;font-size:13px;font-weight:700;color:var(--text3);letter-spacing:1px;display:flex;align-items:center;border-right:1px solid var(--border);">오일나라</span>
+<div class="nav"><span style="padding:0 10px;font-size:12px;font-weight:700;color:var(--text3);letter-spacing:0;display:flex;align-items:center;border-right:1px solid var(--border);white-space:nowrap;">오일나라</span>
   <button class="nav-tab active" onclick="showPanel('input',this)">✏️ 주문 입력</button>
   <button class="nav-tab" onclick="showPanel('monitor',this)">📺 출고 현황</button>
   <button class="nav-tab" onclick="showPanel('admin',this)">🔒 관리자</button>
@@ -323,7 +330,7 @@ body.light .site-logo{filter:brightness(0.95);}
 
 <!-- MONITOR -->
 <div class="panel" id="panel-monitor">
-  <div id="alertBannerWrap"></div>
+  <div id="alertBannerWrap" style="margin-top:0"></div>
   <div class="monitor-toolbar">
     <button class="btn-tool btn-dl" onclick="downloadMonthExcel()">📥 이번 달 저장</button>
     <button class="btn-tool btn-clear" onclick="clearDone()">완료 지우기</button>
