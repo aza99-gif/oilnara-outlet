@@ -137,7 +137,7 @@ body{background:var(--bg);color:var(--text);font-family:'Malgun Gothic','Apple S
 @keyframes pulse{0%,100%{opacity:.4;}50%{opacity:1;}}
 
 /* ALERT BANNER */
-.alert-banner{background:var(--red-bg);border:1px solid var(--red);border-radius:10px;padding:10px 14px;margin:10px 14px 0;font-size:13px;color:var(--red);display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.alert-banner{background:var(--red-bg);border:1px solid var(--red);border-radius:10px;padding:10px 14px;margin:10px 14px 0;font-size:13px;color:var(--red);display:flex;align-items:center;gap:10px;flex-wrap:wrap;line-height:normal;}
 .alert-banner button{background:var(--red);color:#fff;border:none;border-radius:6px;padding:5px 12px;font-size:11px;cursor:pointer;font-family:inherit;margin-left:auto;}
 
 /* MODAL */
@@ -223,21 +223,7 @@ body{background:var(--bg);color:var(--text);font-family:'Malgun Gothic','Apple S
 .toast.show{opacity:1;}
 
 
-  
-  .nav-tab{padding:10px 9px;font-size:11px;}
-  .monitor-toolbar{gap:5px;flex-wrap:wrap;}
-  
-  .nav-right{gap:5px;padding-right:8px;}
-  .nav-clock{display:none;}
-  .date-nav .cur-date{min-width:75px;font-size:12px;}
-  .monitor-toolbar .btn-tool{font-size:11px;padding:6px 10px;}
-  
-  #panel-monitor{padding-top:0;}
-  #panel-monitor .alert-banner-wrap{margin-top:48px;}
-  .monitor-toolbar{margin-top:48px;}
-  .input-wrap{padding-top:60px;}
-  .admin-wrap{padding-top:60px;}
-  #adminLock{padding-top:60px;}
+
 }
 
 /* ══ SITE HEADER ══ */
@@ -270,141 +256,67 @@ body.light
 .btn-preview:hover{border-color:var(--text3);color:var(--text2);}
 .sound-card.selected .sc-name{color:var(--gold2);}
 
-  .nav-tab{padding:0 9px;font-size:11px;height:48px;line-height:48px;}
-  .nav span:first-child{padding:0 8px;font-size:11px;white-space:nowrap;}
-  .nav-right{gap:5px;padding-right:8px;}
-  .nav-clock{display:none;}
-  .theme-btn{padding:4px 8px;font-size:10px;}
 
-  /* ALL PANELS: push down by nav height */
-  .panel.active{padding-top:48px;}
-
-  /* MONITOR specific */
-  .monitor-wrap{display:grid;grid-template-columns:1fr 1.6fr .9fr;gap:12px;height:calc(100vh - 115px);padding:12px;}
   
-  .monitor-toolbar{
-    position:sticky;top:48px;
-    z-index:100;
-    background:var(--bg2);
-    gap:5px;
-    flex-wrap:wrap;
-    padding:8px 10px;
-  }
-  .monitor-toolbar .btn-tool{font-size:11px;padding:6px 9px;}
-  .date-nav .cur-date{min-width:70px;font-size:12px;}
 
-  /* INPUT */
-  .input-wrap{padding:12px 12px 12px;}
-
-  /* ADMIN */
-  .admin-wrap{padding:12px;}
-  #adminLock .admin-lock{padding-top:20px;}
-}
-
-  .nav-tab{padding:0 8px;font-size:11px;height:46px;display:flex;align-items:center;}
-  .nav span:first-child{padding:0 8px;font-size:11px;white-space:nowrap;height:46px;display:flex;align-items:center;}
-  .nav-right{gap:4px;padding-right:8px;}
-  .nav-clock{display:none;}
-  .theme-btn{padding:4px 7px;font-size:10px;}
   
-  .monitor-wrap{display:grid;grid-template-columns:1fr 1.6fr .9fr;gap:12px;height:calc(100vh - 115px);padding:12px;}
   
-  .monitor-toolbar{top:46px;position:sticky;z-index:100;background:var(--bg2);gap:5px;flex-wrap:wrap;padding:8px 10px;}
-  .monitor-toolbar .btn-tool{font-size:11px;padding:6px 9px;}
-  .date-nav .cur-date{min-width:70px;font-size:12px;}
-  .input-wrap{padding:12px;}
-  .admin-wrap{padding:12px;}
+
+
 }
 
   
-  .nav-tab{padding:0 8px;font-size:11px;height:46px;display:flex;align-items:center;}
-  .nav span:first-child{padding:0 8px;font-size:11px;white-space:nowrap;height:46px;display:flex;align-items:center;}
-  .nav-right{gap:4px;padding-right:8px;}
-  .nav-clock{display:none;}
-  .theme-btn{padding:4px 7px;font-size:10px;}
   
-  .monitor-wrap{display:grid;grid-template-columns:1fr 1.6fr .9fr;gap:12px;height:calc(100vh - 115px);padding:12px;}
   
-  #alertBannerWrap{margin-top:0;}
-  .monitor-toolbar{position:sticky;top:46px;z-index:100;background:var(--bg2);gap:5px;flex-wrap:wrap;padding:8px 10px;}
-  .monitor-toolbar .btn-tool{font-size:11px;padding:6px 9px;}
-  .date-nav .cur-date{min-width:70px;font-size:12px;}
-  .input-wrap{padding:12px;}
-  .admin-wrap{padding:12px;}
+  
 }
 
-  .nav>span:first-child{padding:0 9px;font-size:11px;white-space:nowrap;display:flex;align-items:center;}
-  .nav-right{gap:5px;padding-right:10px;}
-  .nav-clock{display:none;}
-  .theme-btn{padding:4px 8px;font-size:10px;}
-  .sync-dot{width:7px;height:7px;}
-  .monitor-wrap{display:grid;grid-template-columns:1fr 1.6fr .9fr;gap:12px;height:calc(100vh - 115px);padding:12px;}
   
-  .monitor-toolbar{gap:5px;flex-wrap:wrap;padding:8px 10px;}
-  .monitor-toolbar .btn-tool{font-size:11px;padding:6px 9px;}
-  .date-nav .cur-date{min-width:70px;font-size:12px;}
-  .input-wrap{padding:16px 12px;}
-  .admin-wrap{padding:16px 12px;}
+  
+  
+  
+  
 }
 
-  .nav-tab{padding:0 9px;font-size:11px;height:46px;display:flex;align-items:center;}
-  .nav>span{padding:0 9px;font-size:11px;white-space:nowrap;display:flex;align-items:center;}
-  .nav-right{gap:5px;padding-right:10px;}
-  .nav-clock{display:none;}
-  .theme-btn{padding:4px 8px;font-size:10px;}
-  .sync-dot{width:7px;height:7px;}
-  .monitor-wrap{display:grid;grid-template-columns:1fr 1.6fr .9fr;gap:12px;height:calc(100vh - 115px);padding:12px;}
-  .col-body{flex:1;overflow-y:auto;padding:7px;border-radius:0 0 12px 12px;border:1px solid var(--border);border-top:none;background:var(--bg);}
-  .monitor-toolbar{gap:5px;flex-wrap:wrap;padding:8px 10px;}
-  .monitor-toolbar .btn-tool{font-size:11px;padding:6px 9px;}
-  .date-nav .cur-date{min-width:70px;font-size:12px;}
-  .input-wrap{padding:16px 12px;}
-  .admin-wrap{padding:16px 12px;}
+  
+  
+}
+
+  
+  
 }
 
 /* ── TABLET ── */
-@media(max-width:1024px){
-  .monitor-wrap{grid-template-columns:1fr 1.4fr .8fr;gap:10px;padding:10px;}
 }
 
 /* ── MOBILE ── */
+
+
+
+
+
+}
+
+
+
+
 @media(max-width:768px){
-  /* Nav */
   .nav{height:46px;overflow:hidden;}
   .nav-tab{padding:0 9px;font-size:11px;height:46px;display:flex;align-items:center;}
   .nav>span{padding:0 8px;font-size:11px;white-space:nowrap;display:flex;align-items:center;}
   .nav-right{gap:5px;padding-right:8px;}
   .nav-clock{display:none;}
   .theme-btn{padding:4px 7px;font-size:10px;}
-  .sync-dot{width:7px;height:7px;}
-
-  /* Monitor: 세로 단일 컬럼 */
-  .monitor-wrap{
-    grid-template-columns:1fr;
-    height:auto;
-    padding:8px;
-    gap:8px;
-  }
+  .monitor-wrap{grid-template-columns:1fr;height:auto;padding:8px;gap:8px;}
   .col{height:auto;}
   .col-body{max-height:320px;}
-  .monitor-toolbar{gap:5px;flex-wrap:wrap;padding:8px 10px;}
+  .monitor-toolbar{gap:5px;flex-wrap:wrap;padding:6px 10px;}
   .monitor-toolbar .btn-tool{font-size:11px;padding:6px 9px;}
-  .date-nav{gap:4px;}
   .date-nav .cur-date{min-width:70px;font-size:12px;}
-  .date-nav button{padding:4px 8px;font-size:12px;}
-
-  /* Input */
-  .input-wrap{padding:16px 12px;}
-  .form-card{padding:18px 14px;}
-
-  /* Admin */
-  .admin-wrap{padding:16px 12px;}
+  .input-wrap{padding:12px;}
+  .admin-wrap{padding:12px;}
   .stats-grid{grid-template-columns:1fr 1fr;}
   .cal-day{min-height:38px;font-size:10px;}
-
-  /* Cards */
-  .card-active .c-pqty-active{font-size:20px;padding:3px 10px;}
-  .card-actions{flex-wrap:wrap;}
   .act-btn{font-size:11px;padding:6px 10px;}
 }
 </style>
@@ -447,7 +359,7 @@ body.light
 
 <!-- MONITOR -->
 <div class="panel" id="panel-monitor">
-  <div id="alertBannerWrap" style="margin-top:0"></div>
+  <div id="alertBannerWrap"></div>
   <div class="monitor-toolbar">
     <button class="btn-tool btn-dl" onclick="downloadMonthExcel()">📥 이번 달 저장</button>
     <button class="btn-tool btn-clear" onclick="clearDone()">완료 지우기</button>
@@ -987,10 +899,12 @@ async function checkAlertBanner(){
   const yData=await sb(`/rest/v1/orders?date=eq.${yStr}&select=id`);
   const yCnt=(yData||[]).length;
   const wrap=document.getElementById('alertBannerWrap');
-  if(wrap&&yCnt>0&&(!yMeta||!yMeta.downloaded)){
+  if(!wrap)return;
+  wrap.style.display='';
+  if(yCnt>0&&(!yMeta||!yMeta.downloaded)){
     wrap.innerHTML=`<div class="alert-banner">⚠️ ${yStr} 출고 내역 미저장 (${yCnt}건)
       <button onclick="downloadDateExcel('${yStr}')">지금 저장</button></div>`;
-  }else if(wrap)wrap.innerHTML='';
+  }else{wrap.innerHTML='';wrap.style.display='none';}
   const awrap=document.getElementById('adminAlertWrap');
   if(awrap&&yCnt>0&&(!yMeta||!yMeta.downloaded)){
     awrap.innerHTML=`<div class="alert-banner" style="margin:0 0 16px">⚠️ ${yStr} 미저장 (${yCnt}건)
