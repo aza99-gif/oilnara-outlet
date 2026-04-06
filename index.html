@@ -112,7 +112,7 @@ body{background:var(--bg);color:var(--text);font-family:'Malgun Gothic','Apple S
 .c-time{font-size:10px;color:var(--text4);margin-top:5px;}
 .c-timing{font-size:10px;color:var(--text4);margin-top:4px;line-height:1.7;}
 
-.c-photo-upload{margin-top:11px;}
+.c-photo-upload{margin-top:11px;display:flex;flex-direction:column;gap:6px;}
 .c-photo-upload label{display:flex;align-items:center;justify-content:center;gap:7px;background:var(--blue-bg);color:var(--blue);border:1px dashed var(--blue);border-radius:8px;padding:10px;font-size:13px;font-weight:700;cursor:pointer;}
 .no-photo-btn{width:100%;background:var(--bg4);color:var(--text4);border:none;border-radius:7px;padding:7px;font-size:11px;cursor:pointer;font-family:inherit;margin-top:5px;}
 .photos-row{display:flex;gap:5px;flex-wrap:wrap;margin-top:7px;}
@@ -224,8 +224,13 @@ body{background:var(--bg);color:var(--text);font-family:'Malgun Gothic','Apple S
 @media(max-width:768px){
   .monitor-wrap{grid-template-columns:1fr;height:auto;padding:8px;}
   .col-body{max-height:380px;}
-  .nav-tab{padding:12px 12px;font-size:12px;}
-  .monitor-toolbar{gap:6px;}
+  .nav-tab{padding:11px 10px;font-size:12px;}
+  .monitor-toolbar{gap:6px;flex-wrap:wrap;}
+  .nav{position:-webkit-sticky;position:sticky;top:0;z-index:200;}
+  .nav-right{gap:6px;padding-right:8px;}
+  .nav-clock{display:none;}
+  .date-nav .cur-date{min-width:75px;font-size:12px;}
+  .monitor-toolbar .btn-tool{font-size:11px;padding:6px 10px;}
 }
 
 /* ══ SITE HEADER ══ */
@@ -682,8 +687,11 @@ function cardActive(o){return`
   <div class="c-time">${o.time_created}</div>
   ${photoThumbs(o)}
   <div class="c-photo-upload">
-    <label>📷 사진 촬영 → 자동 완료
+    <label style="margin-bottom:6px">📷 카메라 촬영 → 자동 완료
       <input type="file" accept="image/*" capture="environment" style="display:none" onchange="photoAndDone(this,${o.id})"/>
+    </label>
+    <label style="background:var(--bg3);border-color:var(--border2);color:var(--text3)">🖼️ 갤러리에서 선택 → 자동 완료
+      <input type="file" accept="image/*" style="display:none" onchange="photoAndDone(this,${o.id})"/>
     </label>
     <button class="no-photo-btn" onclick="doneOrder(${o.id})">완료 (사진없이)</button>
   </div>
