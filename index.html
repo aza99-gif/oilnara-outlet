@@ -32,7 +32,7 @@ body.light{
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
 body{background:var(--bg);color:var(--text);font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif;min-height:100vh;}
 
-.nav{background:var(--bg2);border-bottom:1px solid var(--border2);display:flex;align-items:stretch;position:sticky;top:0;z-index:200;min-height:48px;}
+.nav{background:var(--bg2);border-bottom:1px solid var(--border2);display:flex;align-items:stretch;position:sticky;top:0;z-index:200;}
 .nav-tab{padding:14px 18px;font-size:13px;cursor:pointer;color:var(--text3);border-bottom:3px solid transparent;border:none;background:none;font-family:inherit;white-space:nowrap;transition:all .2s;}
 .nav-tab.active{color:var(--text);border-bottom:2px solid var(--text3);}
 .nav-tab:hover{color:var(--text2);}
@@ -230,7 +230,7 @@ body{background:var(--bg);color:var(--text);font-family:'Malgun Gothic','Apple S
   .nav-clock{display:none;}
   .date-nav .cur-date{min-width:75px;font-size:12px;}
   .monitor-toolbar .btn-tool{font-size:11px;padding:6px 10px;}
-  .panel{padding-top:48px;}
+  
   #panel-monitor{padding-top:0;}
   #panel-monitor .alert-banner-wrap{margin-top:48px;}
   .monitor-toolbar{margin-top:48px;}
@@ -289,13 +289,6 @@ body.light .site-logo{filter:brightness(0.95);}
 .btn-preview:hover{border-color:var(--text3);color:var(--text2);}
 .sound-card.selected .sc-name{color:var(--gold2);}
 
-@media(max-width:768px){
-  /* NAV: fixed at top */
-  .nav{
-    position:fixed;top:0;left:0;right:0;
-    height:48px;min-height:48px;
-    z-index:999;overflow:hidden;
-  }
   .nav-tab{padding:0 9px;font-size:11px;height:48px;line-height:48px;}
   .nav span:first-child{padding:0 8px;font-size:11px;white-space:nowrap;}
   .nav-right{gap:5px;padding-right:8px;}
@@ -329,6 +322,61 @@ body.light .site-logo{filter:brightness(0.95);}
   /* ADMIN */
   .admin-wrap{padding:12px;}
   #adminLock .admin-lock{padding-top:20px;}
+}
+
+  .nav-tab{padding:0 8px;font-size:11px;height:46px;display:flex;align-items:center;}
+  .nav span:first-child{padding:0 8px;font-size:11px;white-space:nowrap;height:46px;display:flex;align-items:center;}
+  .nav-right{gap:4px;padding-right:8px;}
+  .nav-clock{display:none;}
+  .theme-btn{padding:4px 7px;font-size:10px;}
+  
+  .monitor-wrap{grid-template-columns:1fr;height:auto;padding:8px;}
+  .col-body{max-height:400px;}
+  .monitor-toolbar{top:46px;position:sticky;z-index:100;background:var(--bg2);gap:5px;flex-wrap:wrap;padding:8px 10px;}
+  .monitor-toolbar .btn-tool{font-size:11px;padding:6px 9px;}
+  .date-nav .cur-date{min-width:70px;font-size:12px;}
+  .input-wrap{padding:12px;}
+  .admin-wrap{padding:12px;}
+}
+
+  .nav{
+    position:fixed;
+    top:0;left:0;right:0;
+    height:46px;
+    z-index:9999;
+    margin:0;padding:0;
+  }
+  .nav-tab{padding:0 8px;font-size:11px;height:46px;display:flex;align-items:center;}
+  .nav span:first-child{padding:0 8px;font-size:11px;white-space:nowrap;height:46px;display:flex;align-items:center;}
+  .nav-right{gap:4px;padding-right:8px;}
+  .nav-clock{display:none;}
+  .theme-btn{padding:4px 7px;font-size:10px;}
+  
+  .monitor-wrap{grid-template-columns:1fr;height:auto;padding:8px;}
+  .col-body{max-height:400px;}
+  #alertBannerWrap{margin-top:0;}
+  .monitor-toolbar{position:sticky;top:46px;z-index:100;background:var(--bg2);gap:5px;flex-wrap:wrap;padding:8px 10px;}
+  .monitor-toolbar .btn-tool{font-size:11px;padding:6px 9px;}
+  .date-nav .cur-date{min-width:70px;font-size:12px;}
+  .input-wrap{padding:12px;}
+  .admin-wrap{padding:12px;}
+}
+
+@media(max-width:768px){
+  .nav{position:sticky;top:0;z-index:999;height:46px;overflow:hidden;}
+  .nav-tab{padding:0 9px;font-size:11px;height:46px;display:flex;align-items:center;}
+  .nav>span:first-child{padding:0 9px;font-size:11px;white-space:nowrap;display:flex;align-items:center;}
+  .nav-right{gap:5px;padding-right:10px;}
+  .nav-clock{display:none;}
+  .theme-btn{padding:4px 8px;font-size:10px;}
+  .sync-dot{width:7px;height:7px;}
+  .monitor-wrap{grid-template-columns:1fr;height:auto;padding:8px;}
+  .col-body{max-height:400px;}
+  .monitor-toolbar{gap:5px;flex-wrap:wrap;padding:8px 10px;}
+  .monitor-toolbar .btn-tool{font-size:11px;padding:6px 9px;}
+  .date-nav .cur-date{min-width:70px;font-size:12px;}
+  .input-wrap{padding:16px 12px;}
+  .admin-wrap{padding:16px 12px;}
 }
 </style>
 </head>
